@@ -8,30 +8,18 @@
 <body>
     <script src="../lib/jquery/dist/jquery.min.js"></script>
     <script>
-        // var xhr = new XMLHttpRequest;
+        var xhr = new XMLHttpRequest;
 
-        // xhr.open('GET','https://www.chanel.cn/fnbv3/pdp?sku=0107180&locale=zh_CN&skuinfo=true')
+        xhr.open('GET','https://www.chanel.cn/fnbv3/pdp?sku=0107180&locale=zh_CN&skuinfo=true')
 
-        // xhr.send()
+        xhr.send()
 
-        // xhr.onload = function(){
-        //     var res = JSON.parse(xhr.responseText)
-        //     console.log(res);
-        //     console.log('......................');
-        //     console.log(res.productimages[0].shadename);
-        // }
-        $.ajax({
-            url:'https://aldh5.tmall.com/recommend2.html',
-            type:'get',
-            dataType:'json',
-            data:{
-                appId:'201602265,201602267,07055,201602266,2016030118,09044,201605170,201612221,201606279,2016062710'
-
-            },
-            success(res){
-                console.log(res);
-            }
-        })
+        xhr.onload = function(){
+            var res = JSON.parse(xhr.responseText)
+            console.log(res);
+            console.log('......................');
+            console.log(res.productimages[0].shadename);
+        }
     </script>
 </body>
 </html>

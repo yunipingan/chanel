@@ -30,21 +30,21 @@ idlist.forEach(function (item, index) {
         }
     })
 })
-console.log(goodsdata);
+// console.log(goodsdata);
 var parfum = []
 var notparfum = []
 var str0 = ''
 var str1 = ''
 var str2 = ''
 //切换选项卡渲染页面
-$('.nav-tabs > li').click(function (){
+$('.nav-tabs > li').click(function () {
     $('.goodslist > ol').html('')
     $(this).addClass('active')
         .siblings()
         .removeClass('active')
-    if(this.children[0].text === '所有商品') {
-        $('.button > button').css("display","block")
-        if(this.className === 'active'){
+    if (this.children[0].text === '所有商品') {
+        $('.button > button').css("display", "block")
+        if (this.className === 'active') {
             goodsdata.forEach(item => {
                 str0 += `<li>
                 <img src="${item.productimages[0][209]}" alt="">
@@ -61,15 +61,15 @@ $('.nav-tabs > li').click(function (){
             str0 = ''
         }
     }
-    else if (this.children[0].text === '香水'){
-        $('.button > button').css("display","none")
-        if(this.className === 'active'){
-            goodsdata.forEach(item=>{
+    else if (this.children[0].text === '香水') {
+        $('.button > button').css("display", "none")
+        if (this.className === 'active') {
+            goodsdata.forEach(item => {
                 if (item.productid === '0107360' || item.productid === '0107180' || item.productid === '0107300' || item.productid === '0107450' || item.productid === '0107308') {
                     parfum.push(item)
                 }
             })
-            parfum.forEach(item=>{
+            parfum.forEach(item => {
                 str1 += `<li>
                 <img src="${item.productimages[0][209]}" alt="">
                 <div class="textbox">
@@ -86,11 +86,11 @@ $('.nav-tabs > li').click(function (){
             parfum = []
         }
     }
-    else if(this.children[0].text === '护理品'){
-        $('.button > button').css("display","none")
-        if(this.className === 'active'){
+    else if (this.children[0].text === '护理品') {
+        $('.button > button').css("display", "none")
+        if (this.className === 'active') {
             goodsdata.forEach(item => {
-                if(item.productid === '0107920' || item.productid === '0107110' || item.productid === '0107680' || item.productid === '0107960' || item.productid === '0107930' || item.productid === '0107060'){
+                if (item.productid === '0107920' || item.productid === '0107110' || item.productid === '0107680' || item.productid === '0107960' || item.productid === '0107930' || item.productid === '0107060') {
                     notparfum.push(item)
                 }
             })
@@ -116,13 +116,13 @@ $('.nav-tabs > li').click(function (){
 
 //排序
 var ol = document.querySelector('ol')
-$('.button > button').click(function(){
+$('.button > button').click(function () {
     $('.goodslist > ol').html('')
-    goodsdata.sort(function(a,b){
+    goodsdata.sort(function (a, b) {
         return b.productprice - a.productprice
     })
-    for(var i=0;i<goodsdata.length;i++){
-        var str3 =`<li>
+    for (var i = 0; i < goodsdata.length; i++) {
+        var str3 = `<li>
         <img src="${goodsdata[i].productimages[0][209]}" alt="">
         <div class="textbox">
             <a>${goodsdata[i].productname}</a>
@@ -137,3 +137,6 @@ $('.button > button').click(function(){
 })
 
 //点击跳转详情页
+var str = document.querySelector('ol')
+console.log(str);
+
