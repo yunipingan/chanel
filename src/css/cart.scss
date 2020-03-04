@@ -42,35 +42,35 @@
         padding: 0 15px;
         margin-left: 30px;
         .loginbtn {
-          float: left;
-          margin-top: 34px;
-          font-size: 12px;
-          cursor: pointer;
-          margin-left: 50px;
-          margin-right: 20px;
-        }
-        .iconfont{
-          font-size: 40px;
-          float: left;
-          margin-top: 11px;
-          cursor: pointer;
-        }
-        em{
-          float: left;
-          display: block;
-          width: 18px;
-          height: 18px;
-          font-style: normal;
-          color: #FFFFFF;
-          background-color: red;
-          text-align: center;
-          line-height: 18px;
-          font-size: 12px;
-          margin-top: 20px;
-          border-radius: 50%;
-          margin-left: -18px;
-          cursor: pointer;
-        }
+            float: left;
+            margin-top: 34px;
+            font-size: 12px;
+            cursor: pointer;
+            margin-left: 50px;
+            margin-right: 20px;
+          }
+          .iconfont{
+            font-size: 40px;
+            float: left;
+            margin-top: 11px;
+            cursor: pointer;
+          }
+          em{
+            float: left;
+            display: block;
+            width: 18px;
+            height: 18px;
+            font-style: normal;
+            color: #FFFFFF;
+            background-color: red;
+            text-align: center;
+            line-height: 18px;
+            font-size: 12px;
+            margin-top: 20px;
+            border-radius: 50%;
+            margin-left: -18px;
+            cursor: pointer;
+          }
       }
     }
   }
@@ -156,103 +156,8 @@
       }
     }
   }
-h2{
-    height: 30px;
-}
 
-.active {
-    display: block !important;
-    animation: 1s !important;
-}
-
-main {
-    // border-top: 1px solid #ececec;
-    margin-top: 5px;
-    margin-bottom: 120px;
-    h1{
-        height: 38px;
-        text-align: center;
-        color: #000000;
-        margin: 10px 0 40px;
-        font-weight: 300;
-    }
-    .container{
-        width: 308px;
-        margin: 0 auto;
-        font-size: 15px;
-        font-weight: 400;
-        .login{
-            height: auto;
-            border-top: 1px solid #ececec;
-            
-        }
-        .register{
-            // height: 55px;
-            border-top: 1px solid #ececec;
-           
-        }
-        .text1,.text2{
-            height: 24px;
-            margin: 10px 3px 30px 0;
-            padding: 30px 0 30px 0;
-            cursor: pointer;
-            span{
-                &:nth-child(1){
-                    float: left;
-                }
-                &:nth-child(2){
-                    float: right;
-                }
-            }
-        }
-        form{
-            display: none;
-            label{
-                font-size: 12px;
-                font-weight: 400;
-                em{
-                    font-style: normal;
-                    color: red;
-                }
-            }
-            input{
-                display: block;
-                width: 100%;
-                // height: 19px;
-                padding: 10px 9px;
-            }
-            p{
-                width: 100%;
-                font-size: 13px;
-                color: #a2a2a2;
-                margin-bottom: 20px;
-                a{
-                    float: right;
-                    font-size: 13px;
-                    color: #808080;
-                }
-            }
-            button{
-                display: block;
-                width: 100%;
-                margin: 30px 0 15px;
-                padding: 10.5px 25px;
-                background-color: #000000;
-                color: #ffffff;
-                font-size: 14px;
-                font-weight: 300;
-                outline: none;
-            }
-        }
-        i{
-            font-style: normal;
-            font-size: 12px;
-            font-weight: bolder;
-        }
-    }
-}
-
-footer{
+  footer{
     border-top: 1px solid #e6e6e6;
     ul{
         height: 194px;

@@ -41,10 +41,35 @@ header {
       height: 52px;
       padding: 0 15px;
       margin-left: 30px;
-      span {
-        float: right;
+      .loginbtn {
+        float: left;
         margin-top: 34px;
         font-size: 12px;
+        cursor: pointer;
+        margin-left: 50px;
+        margin-right: 20px;
+      }
+      .iconfont{
+        font-size: 40px;
+        float: left;
+        margin-top: 11px;
+        cursor: pointer;
+      }
+      em{
+        float: left;
+        display: block;
+        width: 18px;
+        height: 18px;
+        font-style: normal;
+        color: #FFFFFF;
+        background-color: red;
+        text-align: center;
+        line-height: 18px;
+        font-size: 12px;
+        margin-top: 20px;
+        border-radius: 50%;
+        margin-left: -18px;
+        cursor: pointer;
       }
     }
   }

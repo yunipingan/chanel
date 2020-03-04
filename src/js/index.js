@@ -16,7 +16,7 @@ idlist.forEach(function (item, index) {
         success(res) {
             goodsdata.push(res)
             str += `
-            <li class="olli">
+            <li idx="${res.productid}">
                 <img src="${res.productimages[0][209]}" alt="">
                 <div class="textbox">
                     <a>${res.productname}</a>
@@ -27,9 +27,11 @@ idlist.forEach(function (item, index) {
                 </div>
             </li>`
             $('.goodslist > ol').html(str)
+            localStorage.setItem('goodsinfo', JSON.stringify(goodsdata))
         }
     })
 })
+
 // console.log(goodsdata);
 var parfum = []
 var notparfum = []
@@ -46,7 +48,7 @@ $('.nav-tabs > li').click(function () {
         $('.button > button').css("display", "block")
         if (this.className === 'active') {
             goodsdata.forEach(item => {
-                str0 += `<li>
+                str0 += `<li idx="${item.productid}">
                 <img src="${item.productimages[0][209]}" alt="">
                 <div class="textbox">
                     <a>${item.productname}</a>
@@ -70,7 +72,7 @@ $('.nav-tabs > li').click(function () {
                 }
             })
             parfum.forEach(item => {
-                str1 += `<li>
+                str1 += `<li idx="${item.productid}">
                 <img src="${item.productimages[0][209]}" alt="">
                 <div class="textbox">
                     <a>${item.productname}</a>
@@ -96,7 +98,7 @@ $('.nav-tabs > li').click(function () {
             })
             notparfum.forEach(item => {
                 str2 += `
-                <li>
+                <li idx="${item.productid}">
                     <img src="${item.productimages[0][209]}" alt="">
                     <div class="textbox">
                         <a>${item.productname}</a>
@@ -122,7 +124,7 @@ $('.button > button').click(function () {
         return b.productprice - a.productprice
     })
     for (var i = 0; i < goodsdata.length; i++) {
-        var str3 = `<li>
+        var str3 = `<li idx="${goodsdata[i].productid}">
         <img src="${goodsdata[i].productimages[0][209]}" alt="">
         <div class="textbox">
             <a>${goodsdata[i].productname}</a>
@@ -137,6 +139,31 @@ $('.button > button').click(function () {
 })
 
 //点击跳转详情页
-var str = document.querySelector('ol')
-console.log(str);
+$('.goodslist > ol').on('click', 'li', function () {
+
+    var id = this.getAttribute('idx')
+    console.log(id);
+    window.location.href = './detail.html?id='+id
+})
+
+//登录按钮功能
+$('.loginbtn').click(function(){
+    if(this.innerText === '请登录'){
+        window.location.href = './login.html?page=index&id=0'
+    }
+    
+})
+
+//获取cookie
+var uname = getCookie('uname')
+var upsd = getCookie('upsd')
+
+function setName (){
+    if(uname && upsd){
+        $('.loginbtn').html('欢迎您，'+uname+'！')
+    }
+}
+
+setName()
+
 
