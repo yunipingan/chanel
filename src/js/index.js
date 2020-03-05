@@ -163,7 +163,13 @@ function setName (){
         $('.loginbtn').html('欢迎您，'+uname+'！')
     }
 }
-
 setName()
 
+//点击购物袋按钮跳转购物袋页面
+$('.iconfont').click(function(){
+    window.location.href = './cart.html'
+})
 
+//设置右上角购物袋的商品个数
+var newnum = JSON.parse(localStorage.getItem('num'))
+$('.login > div > em').html(newnum)

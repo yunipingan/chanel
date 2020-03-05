@@ -71,7 +71,7 @@ header .login div em {
   width: 18px;
   height: 18px;
   font-style: normal;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: red;
   text-align: center;
   line-height: 18px;
@@ -172,6 +172,181 @@ header .login div em {
   list-style: initial;
 }
 
+main {
+  width: 100%;
+  height: auto;
+}
+
+main h1 {
+  margin: 30px auto 10px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+main > p {
+  margin: 10px auto;
+  text-align: center;
+  font-size: 13px;
+  color: #808080;
+}
+
+main .box {
+  width: 1302px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+main .box ul {
+  width: 780px;
+  list-style: none;
+}
+
+main .box ul li {
+  width: 780px;
+  height: 164px;
+  padding: 30px 0 35px;
+  color: #000000;
+  border-top: 1px solid #dedede;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .box ul li .glyphicon {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  cursor: pointer;
+}
+
+main .box ul li .image {
+  width: 131px;
+  height: 116px;
+  padding-right: 15px;
+  margin-top: 3px;
+  margin-right: 10px;
+}
+
+main .box ul li .image img {
+  width: 116px;
+  height: 116px;
+}
+
+main .box ul li .info {
+  color: #000000;
+  margin-left: -160px;
+  width: 160px;
+}
+
+main .box ul li .info p:nth-child(1) {
+  font-size: 13px;
+  letter-spacing: 3px;
+}
+
+main .box ul li .info p:nth-child(2) {
+  font-size: 12px;
+  color: #999999;
+}
+
+main .box ul li .info p:nth-child(3) {
+  margin: 8px 0 0;
+}
+
+main .box ul li .info p:nth-child(3) em {
+  font-style: normal;
+}
+
+main .box ul li .info p:nth-child(3) em i {
+  font-style: normal;
+}
+
+main .box ul li .num span {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #dedede;
+  text-align: center;
+  line-height: 21px;
+  float: left;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+main .box ul li .num span:nth-child(1) {
+  border-right: none;
+}
+
+main .box ul li .num span:nth-child(3) {
+  border-left: none;
+}
+
+main .box ul li .num input {
+  display: block;
+  height: 22px;
+  width: 30px;
+  float: left;
+  text-align: center;
+  border: 1px solid #dedede;
+  outline: none;
+}
+
+main .box ul li .sum {
+  margin-right: 6px;
+  width: 80px;
+}
+
+main .box .allnum {
+  height: 264px;
+  width: 430px;
+  border-top: 5px solid #000000;
+}
+
+main .box .allnum p {
+  font-size: 13px;
+  font-weight: 300;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+main .box .allnum p:nth-child(1) {
+  font-size: 16px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+main .box .allnum p:nth-child(3) span:nth-child(2) {
+  font-weight: 500;
+}
+
+main .box .allnum p:nth-child(3) span:nth-child(2) em {
+  font-style: normal;
+}
+
+main .box .allnum .pay {
+  display: block;
+  width: 100%;
+  height: 40px;
+  color: #ffffff;
+  background-color: #000000;
+  font-size: 14px;
+  padding: 10.5px 25px;
+  font-weight: 200;
+  margin-top: 50px;
+}
+
+main .box .allnum .pay:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+
 footer {
   border-top: 1px solid #e6e6e6;
 }
@@ -210,7 +385,7 @@ footer ul li span {
   padding: 10.5px 25px;
   font-size: 12px;
   margin: 0 auto;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border: 1px solid #dedede;
   cursor: pointer;
 }

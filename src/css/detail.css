@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -71,7 +72,7 @@ header .login div em {
   width: 18px;
   height: 18px;
   font-style: normal;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: red;
   text-align: center;
   line-height: 18px;
@@ -192,9 +193,6 @@ main .row {
 }
 
 main .row .left {
-  width: 666px;
-  height: 446.5px;
-  margin: 0 0 0 111px;
   float: left;
 }
 
@@ -204,18 +202,68 @@ main .row .left article {
   margin-left: 55px;
 }
 
-main .row .left article a {
-  width: 450px;
-  height: 436.5px;
-  margin: 0 0 10px;
+main .row .left article img {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
-main .row .left article a img {
-  display: block;
-  width: 436.5px;
-  height: 436.5px;
-  margin: 0 auto;
-  transform: scale(0.7);
+main .row .left article .box {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+main .row .left article .box > .show {
+  width: 450px;
+  height: 450px;
+  border: 1px solid #333;
+  position: relative;
+}
+
+main .row .left article .box > .show > .mask {
+  width: 200px;
+  height: 200px;
+  background-color: grey;
+  opacity: .4;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: none;
+}
+
+main .row .left article .box > .list {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+main .row .left article .box > .list > p {
+  width: 54px;
+  height: 54px;
+  border: 1px solid #333;
+  margin-right: 10px;
+}
+
+main .row .left article .box > .list > p.active {
+  border-color: red;
+}
+
+main .row .left article .box > .enlarge {
+  /* 容器 与背景图的比例为 1 ：2 */
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 0;
+  left: 101%;
+  background-size: 800px 800px;
+  background-position: 0 0;
+  display: none;
 }
 
 main .row .right {
@@ -242,7 +290,7 @@ main .row .right h1 span {
 
 main .row .right em {
   font-style: normal;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #000000;
   font-size: 12px;
   margin: 10px 0;
@@ -262,7 +310,7 @@ main .row .right .dropdown .btn {
 }
 
 main .row .right .dropdown .btn:hover {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 main .row .right .dropdown .btn .caret {
@@ -296,7 +344,7 @@ main .row .right #add {
   width: 100%;
   height: 40px;
   padding: 10.5px 25px;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #000000;
   outline: none;
   font-size: 12px;
@@ -304,7 +352,7 @@ main .row .right #add {
 
 main .row .right #add:hover {
   color: #000000;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 footer {
@@ -345,7 +393,7 @@ footer ul li span {
   padding: 10.5px 25px;
   font-size: 12px;
   margin: 0 auto;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border: 1px solid #dedede;
   cursor: pointer;
 }

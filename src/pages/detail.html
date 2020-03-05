@@ -22,7 +22,7 @@
             <div>
                 <span class="loginbtn">请登录</span>
                 <span class="iconfont icon-shoppingbags"></span>
-                <em>12</em>
+                <em>1</em>
             </div>
         </div>
     </header>
@@ -209,9 +209,14 @@
         <div class="row">
             <!-- <div class="left">
                 <article>
-                    <a>
-                        <img src="https://i.chanel.cn/fnbv3/image/full/chanel__com/skus_relative/bleu-de-chanel-_-100ml.3145891073607.jpg" alt="">
-                    </a>
+                    <div class="box">
+                        <div class="show">
+                            <img src="https://i.chanel.cn/fnbv3/image/full/chanel__com/skus_relative/bleu-de-chanel-_-100ml.3145891071801.jpg"
+                                alt="">
+                            <div class="mask"></div>
+                        </div>
+                        <div class="enlarge"></div>
+                    </div>
                 </article>
             </div>
             <div class="right">
@@ -259,6 +264,10 @@
     <script src="../lib/jquery/dist/jquery.min.js"></script>
     <script src="../lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../js/detail.js"></script>
+    <script src="../js/enlarge.js"></script>
+    <script>
+        new Enlarge('.box')
+    </script>
 </body>
 
 </html>

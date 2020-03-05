@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var stu1 = Object(),stu2 = Object()
+        stu1.name = 'yoyo'
+        stu1.age = 18
+        stu1.sex = 'boy'
+        stu2.name = 'Alice'
+        stu2.age = 19
+        stu2.sex = 'girl'
+        var arr = [stu1,stu2]
+        // console.log(arr);
+        var names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];
+        console.log(names);
+        
+        var countedNames = names.reduce(function (allNames, name) {
+            if (name in allNames) {
+                allNames[name]++;
+            }
+            else {
+                allNames[name] = 1;
+            }
+            return allNames;
+        }, {});
+        console.log(countedNames);
+        for(key in countedNames){
+            // console.log(key,countedNames[key]);
+            var newarr = arr.filter(function(item,index){
+                return item.name === key
+            })
+            if(newarr.length !== 0){
+                console.log(newarr);
+                console.log(countedNames[key]);
+                
+            }
+        }
+        
+    </script>
+</body>
+
+</html>

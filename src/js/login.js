@@ -125,4 +125,7 @@ registerform.onsubmit = function (e) {
     }
 }
 
+//设置右上角购物袋的商品个数
+var newnum = JSON.parse(localStorage.getItem('num'))
+$('.login > div > em').html(newnum)
 
