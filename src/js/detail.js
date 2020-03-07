@@ -9,11 +9,17 @@ var newnum = JSON.parse(localStorage.getItem('num'))
 
 $('.login > div > em').html(newnum)
 $('.row').on('click', 'button', function () {
-    newaddlist.push(id)
-    localStorage.setItem('addlist',JSON.stringify(newaddlist))
-    newnum += 1
-    $('.login > div > em').html(newnum)
-    localStorage.setItem('num',JSON.stringify(newnum))
+    if ($('.login > div > .loginbtn').html() === '请登录') {
+        alert('请先登录！')
+        window.location.href = './login.html?page=index&id=' + 0
+    }
+    else {
+        newaddlist.push(id)
+        localStorage.setItem('addlist', JSON.stringify(newaddlist))
+        newnum += 1
+        $('.login > div > em').html(newnum)
+        localStorage.setItem('num', JSON.stringify(newnum))
+    }
 })
 
 //从缓存读取数据
@@ -88,4 +94,3 @@ $('.iconfont').click(function () {
     // console.log(goodsArr);
     window.location.href = './cart.html'
 })
-

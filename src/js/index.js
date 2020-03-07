@@ -143,30 +143,30 @@ $('.goodslist > ol').on('click', 'li', function () {
 
     var id = this.getAttribute('idx')
     console.log(id);
-    window.location.href = './detail.html?id='+id
+    window.location.href = './detail.html?id=' + id
 })
 
 //登录按钮功能
-$('.loginbtn').click(function(){
-    if(this.innerText === '请登录'){
+$('.loginbtn').click(function () {
+    if (this.innerText === '请登录') {
         window.location.href = './login.html?page=index&id=0'
     }
-    
+
 })
 
 //获取cookie
 var uname = getCookie('uname')
 var upsd = getCookie('upsd')
 
-function setName (){
-    if(uname && upsd){
-        $('.loginbtn').html('欢迎您，'+uname+'！')
+function setName() {
+    if (uname && upsd) {
+        $('.loginbtn').html('欢迎您，' + uname + '！')
     }
 }
 setName()
 
 //点击购物袋按钮跳转购物袋页面
-$('.iconfont').click(function(){
+$('.iconfont').click(function () {
     window.location.href = './cart.html'
 })
 

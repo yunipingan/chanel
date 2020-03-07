@@ -1,4 +1,13 @@
-// var count = document.querySelector('.count')
+//获取cookie
+var uname = getCookie('uname')
+var upsd = getCookie('upsd')
+
+function setName() {
+    if (uname && upsd) {
+        $('.loginbtn').html('欢迎您，' + uname + '！')
+    }
+}
+setName()
 
 //设置右上角购物袋的商品个数
 var newnum = JSON.parse(localStorage.getItem('num'))
@@ -10,8 +19,7 @@ $('main > p >a').html(newnum)
 var goodsinfo = JSON.parse(localStorage.getItem('goodsinfo'))
 var str, num = 0
 var addlist = JSON.parse(localStorage.getItem('addlist'))
-console.log(addlist);
-
+//将数组里面的id统计各个id的个数，即商品的个数
 var newaddlist = addlist.reduce(function (allNames, name) {
     if (name in allNames) {
         allNames[name]++;
@@ -29,7 +37,6 @@ for (key in newaddlist) {
     if (shopLists.length !== 0) {
         // console.log(shopLists);
         shopLists.forEach(item => {
-            num += 1
             str += `
             <li data-id="${item.productid}">
             <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
@@ -98,16 +105,12 @@ $('ul').on('click', '.reduce', function () {
         //添加商品id到localstorage，记录总数
         addlist.splice($.inArray(id,addlist),1)
         localStorage.setItem('addlist',JSON.stringify(addlist))
-        console.log(addlist);
-        
     }
 
 })
 
 //点击加按钮，相关变化
-$('ul').on('click', '.add', function (e) {
-    e = e || window.event
-    e.preventDefault()
+$('ul').on('click', '.add', function () {
     //获取input值
     var oldCount = $(this).prev().val() * 1
     //获取单价
@@ -134,18 +137,23 @@ $('ul').on('click', '.add', function (e) {
     localStorage.setItem('num', JSON.stringify(newnum))
     //添加商品id到localstorage，记录总数
     addlist.push(id)
-    console.log(addlist);
-    
     localStorage.setItem('addlist',JSON.stringify(addlist))
 })
 
 //点击删除的变化
 $('ul').on('click', '.glyphicon', function () {
+    var id = $(this).parent().data('id')
     //总价格变化
     $('#allnum').html($('#allnum').html() * 1 - $(this).next().next().next().next().children().html() * 1)
     //购物袋总件数变化
-    var renum = $('.login > div > em').html() * 1
-    $('.login > div > em').html(renum - $(this).next().next().next().children().eq(1).val())
-    $('main > p >a').html(renum - $(this).next().next().next().children().eq(1).val())
+    var renum = JSON.parse(localStorage.getItem('num'))*1
+    var newrenum = renum - $(this).next().next().next().children().eq(1).val()
+    localStorage.setItem('num',JSON.stringify(newrenum))
+    $('.login > div > em').html(newrenum)
+    $('main > p >a').html(newrenum)
+    //添加商品id到localstorage，记录总数
+    var remnum = $(this).next().next().next().children().eq(1).val()
+    addlist.splice($.inArray(id,addlist),remnum)
+    localStorage.setItem('addlist',JSON.stringify(addlist))
     $(this).parent().remove()
 })

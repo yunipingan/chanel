@@ -64,8 +64,8 @@ loginform.onsubmit = function (e) {
             if (res.code === '0') {
                 alert(res.message)
             } else if (res.code === '1') {
-                setCookie('uname',inpusername,'15')
-                setCookie('upsd',inppassword,'15')
+                setCookie('uname',inpusername,'3000')
+                setCookie('upsd',inppassword,'3000')
                 if(page === 'index'){
                     window.location.href = './index.html'
                 }else if(page === 'detail'){
@@ -129,3 +129,5 @@ registerform.onsubmit = function (e) {
 var newnum = JSON.parse(localStorage.getItem('num'))
 $('.login > div > em').html(newnum)
 
+localStorage.setItem('addlist',JSON.stringify([]))
+localStorage.setItem('num',JSON.stringify(0))
