@@ -1,0 +1,16 @@
+{
+  "id": "1672012",
+  "name": "chanel",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1429626",
+      "name": "购物袋",
+      "font_class": "shoppingbags",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    }
+  ]
+}
